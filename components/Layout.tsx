@@ -9,11 +9,11 @@ export interface ComponentProps {
 
 export default ({
     children,
-    title = 'Home',
+    title,
   }: ComponentProps) => {
     return (<>
 	<Head>
-		<title>{title ? `${title} | DDCAG` : 'DDCAG'}</title>
+		<title>{title ? `${title} | TRESWEB` : 'TRESWEB'}</title>
 		<meta name="description" content="ServicePad Inventory Management System" />
 		{/* <link rel="icon" href={"/icons/favicon.ico"} /> */}
 		<link rel="icon" href={"/favicon.ico"} />
