@@ -26,7 +26,7 @@ export default ({
 					<a className="pa-2 tx-white py-8">Go Home</a>
 				</Link> */}
 				{/* <Link target="_blank" href="https://gamearteesan.gitbook.io/arteesan/styles/core-css"> */}
-					<a target="_blank" href="https://gamearteesan.gitbook.io/arteesan/styles/core-css" className="pa-2 tx-white py-8">API / DOCS</a>
+					<a target="_blank" href="https://abrahamduno.vercel.app/" className="pa-2 tx-white py-8">PORTFOLIO</a>
 				{/* </Link> */}
 			</div>
 	    </div>

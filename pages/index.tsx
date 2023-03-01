@@ -46,8 +46,7 @@ function Gallery({
     },[])
     return (
     <div className="body pos-rel flex-col flex-justify-start">
-        <div className="my-100">
-        </div>
+        <div className="mt-100"></div>
         <div className="tx-white my-4 flex">
             <div className="flex-col flex-align-start">
                 <div className="flex-col tx-smd">Abraham</div>
@@ -56,7 +55,7 @@ function Gallery({
             <div className="pr-1 bg-w-10 mx-8">
             </div>
             <div className="flex-align-self-center tx-lgx">
-                CSSCSS
+                TRESWEB
             </div>
         </div>
         <div className="bg-glass-6  bord-r-10 tx-white py-8 z-999 fade-in px-8 w-max-700px flex-col"
@@ -91,7 +90,7 @@ function Gallery({
                         </div>
                     </div>
                     <div className=" huerotate-1 opaci-25 pos-abs scale-150"  >
-                        <div className="spin-4 flex tx-green " style={{filter:"brightness(200%) saturate(250%) hue-rotate(180deg) "}}> {/* blur is wip */}
+                        <div className="spin-3 flex tx-green " style={{filter:"brightness(200%) saturate(250%) hue-rotate(180deg) "}}> {/* blur is wip */}
                             .
                             <div className="spin-60 paci-50 flex tx-red px-1">
                                 .
@@ -106,19 +105,28 @@ function Gallery({
                     test
                 </div> */}
                 <h1 className="tx-xl  flex-col flex-align-start mr-8 flex-1" >
-                    <span className="tx-bold-2 mb-2">Move fast, <br /> use CSS.</span>
+                    <span className="tx-bold-2 mb-2">Build fast, <br /> use the Web.</span>
                     {/* <span className="tx-bold-3 mb-4">DCA</span> */}
                 </h1>
                 <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg"
                     href="/chart/1d?token=btc"
                     style={{boxShadow:"0px 0px 25px #CF589433"}}
                 >
-                    DEMO
+                    DEMOS
                 </a>
             </div>
             <span className="tx-lg tx-bold-5  opaci-75 tx-ls-1 ">
-                An easy and consistent utility-first CSS framework.
+                A consistent Development <br /> Framework for the new Web.
             </span>
+            <hr className="opaci-10 w-50 mt-4 mb-8" />
+            <div className="flex-col gap-4 ">
+                <span className="tx- tx-bold-3  opaci-50 tx-ls-3 tx-center">
+                    CSSCSS <br/> Utility-first CSS Framework
+                </span>
+                <span className="tx- tx-bold-3  opaci-50 tx-ls-3 tx-center">
+                    THRUE <br/> 3D Browser Blockchain Game Framework
+                </span>
+            </div>
         </div>
 
         {/* Images will go here */}
@@ -143,9 +151,13 @@ function Gallery({
 
 
             <div className="mt-200"></div>
+
+
+            {/* <hr className="opaci-10 w-100 mt-4 mb-8" /> */}
             {/* |{JSON.stringify(example)}| */}
-            <h1 className=" tx-xxxl opaci-5 tx-ls-8 flex-col" onClick={() => { test(); }}>
-                <span>API</span>
+            <h1 className="  opaci-10  flex-col" onClick={() => { test(); }}>
+                <span className="tx-lx">CSSCSS</span>
+                <span className="tx-xxxl tx-ls-8">API</span>
             </h1>
             <div className=" w-max-1080px pos-rel flex-col ">
 
@@ -155,17 +167,22 @@ function Gallery({
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">POSITION</button>
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">SIZE</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
+                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">INDEX</button>
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">SPACING</button>
                         </div>
-                        <div className="flex tx-lgx mt-8">STRUCTURE</div>
+                        <div className="flex-wrap gap-3 mt-8">
+                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
+                        </div>
+                        <div className="flex tx-lgx mt-8">UPDATE</div>
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">TEXT</button>
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">BACKGROUND</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">FILTER</button>
                         </div>
-                        <div className="flex tx-lgx mt-8">UPDATE</div>
+                        <div className="flex-wrap gap-3 mt-8">
+                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
+                        </div>
+                        <div className="flex tx-lgx mt-8">BEHAVE</div>
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">CURSOR</button>
                             <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">MEDIA QUERY</button>
@@ -175,6 +192,79 @@ function Gallery({
                     </div>
                 </div>
             </div>
+
+            
+            <div className=" flex gap-2 mt-100 ">
+                <a target="_blank" href="https://gamearteesan.gitbook.io/arteesan/styles/core-css"
+                    className="opaci-chov--50 pa-2 tx-white py-8">
+                    API DOCS
+                </a>
+                <a target="_blank" href="https://github.com/3dunoabraham/csscss"
+                    className="opaci-chov--50 pa-2 tx-white py-8">
+                    GITHUB
+                </a>
+                <a target="_blank" href="https://www.npmjs.com/package/csscss"
+                    className="opaci-chov--50 pa-2 tx-white py-8">
+                    NPM
+                </a>
+            </div>
+
+            <div className="mt-200"></div>
+            <hr className="opaci-10 w-100 mt-4 mb-8" />
+            <div className="mt-200"></div>
+
+            {/* |{JSON.stringify(example)}| */}
+            <h1 className="  opaci-10  flex-col" onClick={() => { test(); }}>
+                <span className="tx-lx">THRUE</span>
+                <span className="tx-xxxl tx-ls-8">API</span>
+            </h1>
+            <div className=" w-max-1080px pos-rel flex-col ">
+
+                <div className="flex-row">
+                    <div className="flex-col">
+                        <div className="flex tx-lgx mt-8">SCRIPTS</div>
+                        <div className="flex-wrap gap-3">
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/scripts/constants" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">CONSTANTS</a>
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/scripts/helpers" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">HELPERS</a>
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/scripts/styles" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">STYLES</a>
+                        </div>
+                        {/* <div className="flex-wrap gap-3 mt-8">
+                            <a target="_blank" href="#" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">DISPLAY</a>
+                        </div> */}
+                        <div className="flex tx-lgx mt-8">Components</div>
+                        <div className="flex-wrap gap-3">
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/ui/pages" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">PAGES</a>
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/ui/parts" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">PARTS</a>
+                        </div>
+                        {/* <div className="flex-wrap gap-3 mt-8">
+                            <a target="_blank" href="#" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">OPACITY</a>
+                        </div> */}
+                        <div className="flex tx-lgx mt-8">GAME ENGINE</div>
+                        <div className="flex-wrap gap-3">
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/thrue/components" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">COMPONENTS</a>
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/thrue/models" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">MODELS</a>
+                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/thrue/scene" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">SCENE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div className=" flex gap-2 mt-100 ">
+                <a target="_blank" href="https://thrue.gitbook.io/thrue/"
+                    className="opaci-chov--50 pa-2 tx-white py-8">
+                    API DOCS
+                </a>
+                <a target="_blank" href="https://github.com/3dunoabraham/thrue"
+                    className="opaci-chov--50 pa-2 tx-white py-8">
+                    GITHUB
+                </a>
+                <a target="_blank" href="https://thrue-beta.vercel.app/"
+                    className="opaci-chov--50 pa-2 tx-white py-8">
+                    DEMO
+                </a>
+            </div>
+
         </div>
 
         <div className="mt-200 pt-200"></div>
