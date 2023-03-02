@@ -44,7 +44,7 @@ function Gallery({
     useEffect(()=>{
         console.log(services)
     },[])
-    return (
+    return (<>
     <div className="body pos-rel flex-col flex-justify-start">
         <div className="mt-100"></div>
         <div className="tx-white my-4 flex">
@@ -213,9 +213,40 @@ function Gallery({
                 </a>
             </div>
 
-            <div className="mt-200"></div>
-            <hr className="opaci-10 w-100 mt-4 mb-8" />
-            <div className="mt-200"></div>
+
+        </div>
+        <div className="mt-100 pt-100"></div>
+
+
+        {/* <div className="flex-col gap-3 mt-4 pb-200 ">
+            <div className="tx-xl tx-white tx-ls-2 opaci-chov--10 ">
+                <Link href="/dashboard?token=btc" target="_blank">
+                    <a className="tx-white">DASHBOARD</a>
+                </Link>
+            </div>
+            <div className="tx-xl tx-ls-5 tx-white tx-ls-2 opaci-chov--10 mt-3">
+                <Link href="/faq" target="_blank">
+                    <a className="tx-white nodeco">FAQ</a>
+                </Link>
+            </div>
+            <div className="tx-lgx tx-white tx-ls-2 opaci-chov--10 ">
+                <Link href="/contact" target="_blank">
+                    <a className="tx-white nodeco">Contact</a>
+                </Link>
+            </div>
+            <div className="tx-lgx tx-white tx-ls-2 opaci-chov--10 ">
+                <Link href="/contact" target="_blank">
+                    <a className="tx-white nodeco">Blog</a>
+                </Link>
+            </div>
+        </div> */}
+
+    </div>
+    <div className="second-body pos-rel flex-col flex-justify-start tx-white py-100">
+        
+        <div className=""></div>
+            {/* <hr className="opaci-10 w-100 mt-4 mb-8" /> */}
+            {/* <div className="mt-200"></div> */}
 
             {/* |{JSON.stringify(example)}| */}
             <h1 className="  opaci-10  flex-col" onClick={() => { test(); }}>
@@ -268,36 +299,11 @@ function Gallery({
                     DEMO
                 </a>
             </div>
-
-        </div>
-
-        <div className="mt-200 pt-200"></div>
-
-        {/* <div className="flex-col gap-3 mt-4 pb-200 ">
-            <div className="tx-xl tx-white tx-ls-2 opaci-chov--10 ">
-                <Link href="/dashboard?token=btc" target="_blank">
-                    <a className="tx-white">DASHBOARD</a>
-                </Link>
-            </div>
-            <div className="tx-xl tx-ls-5 tx-white tx-ls-2 opaci-chov--10 mt-3">
-                <Link href="/faq" target="_blank">
-                    <a className="tx-white nodeco">FAQ</a>
-                </Link>
-            </div>
-            <div className="tx-lgx tx-white tx-ls-2 opaci-chov--10 ">
-                <Link href="/contact" target="_blank">
-                    <a className="tx-white nodeco">Contact</a>
-                </Link>
-            </div>
-            <div className="tx-lgx tx-white tx-ls-2 opaci-chov--10 ">
-                <Link href="/contact" target="_blank">
-                    <a className="tx-white nodeco">Blog</a>
-                </Link>
-            </div>
-        </div> */}
-
     </div>
-    )
+    <div className="body pos-rel flex-col flex-justify-start">
+        <div className="mt-200 pt-200"></div>
+    </div>
+    </>)
 }
 
 function HrH() {
