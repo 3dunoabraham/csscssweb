@@ -115,18 +115,22 @@ function Gallery({
                     DEMOS
                 </a>
             </div>
-            <span className="tx-lg tx-bold-5  opaci-75 tx-ls-1 ">
-                A consistent Development <br /> Framework for the new Web.
+
+            <span className="tx-sm tx-bold-5  opaci-50 tx-ls- ">
+                A consistent development framework for the new Web.
             </span>
-            <hr className="opaci-10 w-50 mt-4 mb-8" />
+            {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
+
+            <hr className="opaci-10 w-50 mt-4 mt-100" />
             <div className="flex-col gap-4 ">
-                <span className="tx- tx-bold-3  opaci-50 tx-ls-3 tx-center">
+                <span className="tx- tx-bold-3  opaci-chov--25 opaci-75 tx-ls-3 py-3 tx-center">
                     CSSCSS <br/> Utility-first CSS Framework
                 </span>
-                <span className="tx- tx-bold-3  opaci-50 tx-ls-3 tx-center">
+                <span className="tx- tx-bold-3  opaci-chov--25 opaci-75 tx-ls-3 py-3 tx-center">
                     THRUE <br/> 3D Browser Blockchain Game Framework
                 </span>
             </div>
+            <hr className="opaci-10 w-50 mt-4 mb-8" />
         </div>
 
         {/* Images will go here */}
