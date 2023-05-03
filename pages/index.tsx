@@ -372,19 +372,21 @@ export default Gallery;
 
 export const getStaticProps = async () => {
     // const example = await import('./api/example.json');
-    const supabaseAdmin = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL || "",
-        process.env.SUPABASE_SERVICE_ROLE_KEY || ""
-    );
-    let links = (await supabaseAdmin.from("links").select("*").order("id")).data || []
-    let services = (await supabaseAdmin.from("strats").select("*").order("id")).data || []
+    // const supabaseAdmin = createClient(
+    //     process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+    //     process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+    // );
+    // let links = (await supabaseAdmin.from("links").select("*").order("id")).data || []
+    // let services = (await supabaseAdmin.from("strats").select("*").order("id")).data || []
 
     
 
     return {
         props: {
-            links: links,
-            services: services,
+            // links: links,
+            // services: services,
+            links: [],
+            services: [],
             example: {},
         },
     };
