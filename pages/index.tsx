@@ -55,7 +55,7 @@ function Gallery({
             <div className="pr-1 bg-w-10 mx-8">
             </div>
             <div className="flex-align-self-center tx-lgx">
-                TRESWEB
+                TechStack
             </div>
         </div>
         <div className="bg-glass-6  bord-r-10 tx-white py-8 z-999 fade-in px-8 w-max-700px flex-col"
