@@ -256,7 +256,7 @@ function Gallery({
         <div className=""></div>
             
             <h1 className="  opaci-25  flex-col mb-" onClick={() => { test(); }}>
-                <span className="tx-xxxl">CheatSheet</span>
+                <span className="tx-xxxl">Cheat <br /> Sheet</span>
             </h1>
             <div className=" w-max-1080px pos-rel flex-col ">
 
@@ -344,7 +344,7 @@ function Gallery({
     
     <div className="body pos-rel flex-col flex-justify-start pt-8 noverflow">
         
-        <img style={{transform:"translateY(150px)"}} src="/img/ibis.png"/>
+        <img style={{transform:"translateY(100px)"}} width={300} src="/img/ibis.png"/>
         
     </div>
     </>)
