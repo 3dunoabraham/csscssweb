@@ -164,7 +164,7 @@ function Gallery({
             {/* |{JSON.stringify(example)}| */}
             <h1 className="  opaci-25  flex-col mb-" onClick={() => { test(); }}>
                 <span className="tx-xxxl">Utilities</span>
-                {/* <span className="tx-xxxl tx-ls-8">API</span> */}
+                <span className="tx-xxxl tx-ls-8">API</span>
             </h1>
 
 {/*             
