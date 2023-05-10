@@ -46,25 +46,25 @@ function Gallery({
     },[])
     return (<>
     <div className="body pos-rel flex-col flex-justify-start">
-        <div className="mt-100"></div>
+        <div className="mt-100 Q_md_x"></div>
         <div className="tx-white my-4 flex">
-            <div className="flex-col flex-align-start">
-                <div className="flex-col tx-smd">Abraham</div>
-                <div className="flex-col tx-lgx">Duno</div>
+            <div className="flex-align-self-center tx-lgx">
+                CSSCSS
             </div>
             <div className="pr-1 bg-w-10 mx-8">
             </div>
-            <div className="flex-align-self-center tx-lgx">
-                TechStack
+            <div className="flex-col flex-align-start">
+                <div className="flex-col tx-smd">Utility First CSS</div>
+                <div className="flex-col tx-lgx">Framework</div>
             </div>
         </div>
-        <div className="bg-glass-6  bord-r-10 tx-white py-8 z-999 fade-in px-8 w-max-700px flex-col"
+        <div className="bg-glass-6 ma-2 bord-r-10 tx-white py-8 z-999 fade-in px-8 w-max-700px flex-col"
             style={{
                 border:"1px solid #777",
                 boxShadow:"0 10px 50px -20px #00000077"
             }}
         >
-            <div className="flex-center  flex-justify-between w-100">
+            <div className="flex-center Q_xs_sm_flex-col flex-justify-between w-100">
                 
                 <div className=" huerotate-1 pos-rel scale-200">
                     <div className="spin-5 flex tx-green " style={{filter:"brightness(200%) saturate(250%)"}}>
@@ -105,32 +105,35 @@ function Gallery({
                     test
                 </div> */}
                 <h1 className="tx-xl  flex-col flex-align-start mr-8 flex-1" >
-                    <span className="tx-bold-2 mb-2">Build fast, <br /> use the Web.</span>
+                    <span className="tx-bold-2 mb-2">Build fast, <br /> use CSS.</span>
                     {/* <span className="tx-bold-3 mb-4">DCA</span> */}
                 </h1>
-                <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg"
-                    href="/chart/1d?token=btc"
+                <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg" target="_blank"
+                    href="https://3dunoabraham.github.io/csscss/"
                     style={{boxShadow:"0px 0px 25px #CF589433"}}
                 >
-                    DEMOS
+                    View Demo
                 </a>
             </div>
 
-            <span className="tx-sm tx-bold-5  opaci-50 tx-ls- ">
-                A consistent development framework for the new Web.
+            <span className="tx-sm tx-bold-5 ma-2 opaci-50 tx-ls- tx-center">
+                A consistent & intuitive styling framework fully based on CSS.
             </span>
             {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
 
-            <hr className="opaci-10 w-50 mt-4 mt-100" />
-            <div className="flex-col gap-4 ">
-                <span className="tx- tx-bold-3  opaci-chov--25 opaci-75 tx-ls-3 py-3 tx-center">
-                    CSSCSS <br/> Utility-first CSS Framework
-                </span>
-                <span className="tx- tx-bold-3  opaci-chov--25 opaci-75 tx-ls-3 py-3 tx-center">
-                    THRUE <br/> 3D Browser Blockchain Game Framework
-                </span>
+            <hr className="opaci-10 w-50  mt-100" />
+            <div className="flex-col  ">
+                <a href="https://unpkg.com/csscss@latest/index.css" target="_blank" className="tx-lx tx-bold-3 tx-white opaci-chov--25 tx-bold tx-ls-3 py-6 tx-center">
+                    Download
+                </a>
             </div>
-            <hr className="opaci-10 w-50 mt-4 mb-8" />
+            {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
+            <a href="https://www.npmjs.com/package/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
+                Download from NPM
+            </a>
+            <a href="https://tresd1.gitbook.io/csscss/" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
+                Docs
+            </a>
         </div>
 
         {/* Images will go here */}
@@ -159,62 +162,63 @@ function Gallery({
 
             {/* <hr className="opaci-10 w-100 mt-4 mb-8" /> */}
             {/* |{JSON.stringify(example)}| */}
-            <h1 className="  opaci-10  flex-col" onClick={() => { test(); }}>
-                <span className="tx-lx">CSSCSS</span>
-                <span className="tx-xxxl tx-ls-8">API</span>
+            <h1 className="  opaci-25  flex-col mb-" onClick={() => { test(); }}>
+                <span className="tx-xxxl">Utilities</span>
+                {/* <span className="tx-xxxl tx-ls-8">API</span> */}
             </h1>
+
+{/*             
+<div className=" flex-col gap-2 my-8 ">
+    <a target="_blank" href="https://gamearteesan.gitbook.io/arteesan/styles/core-css"
+        className="opaci-chov--50 tx-lg pa-2 tx-white py-2">
+        Creational Classes
+    </a>
+    <a target="_blank" href="https://github.com/3dunoabraham/csscss"
+        className="opaci-chov--50 tx-lg pa-2 tx-white py-2">
+        Structural Classes
+    </a>
+    <a target="_blank" href="https://www.npmjs.com/package/csscss"
+        className="opaci-chov--50 tx-lg pa-2 tx-white py-2">
+        Behavioural Classes
+    </a>
+</div> */}
             <div className=" w-max-1080px pos-rel flex-col ">
 
                 <div className="flex-row">
                     <div className="flex-col">
-                        <div className="flex tx-lgx mt-8">CREATE</div>
+                        <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
                         <div className="flex-wrap gap-3">
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">POSITION</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">SIZE</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">INDEX</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">SPACING</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">POSITION</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">SIZE</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">INDEX</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">SPACING</button>
                         </div>
                         <div className="flex-wrap gap-3 mt-8">
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
                         </div>
-                        <div className="flex tx-lgx mt-8">UPDATE</div>
+                        <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">UPDATE</div>
                         <div className="flex-wrap gap-3">
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">TEXT</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">BACKGROUND</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">FILTER</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">TEXT</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">BACKGROUND</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">FILTER</button>
                         </div>
                         <div className="flex-wrap gap-3 mt-8">
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
                         </div>
-                        <div className="flex tx-lgx mt-8">BEHAVE</div>
+                        <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">BEHAVE</div>
                         <div className="flex-wrap gap-3">
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">CURSOR</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">MEDIA QUERY</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">ANIMATION</button>
-                            <button className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">EXTRA</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">CURSOR</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">MEDIA QUERY</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">ANIMATION</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">EXTRA</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div className=" flex gap-2 mt-100 ">
-                <a target="_blank" href="https://gamearteesan.gitbook.io/arteesan/styles/core-css"
-                    className="opaci-chov--50 pa-2 tx-white py-8">
-                    API DOCS
-                </a>
-                <a target="_blank" href="https://github.com/3dunoabraham/csscss"
-                    className="opaci-chov--50 pa-2 tx-white py-8">
-                    GITHUB
-                </a>
-                <a target="_blank" href="https://www.npmjs.com/package/csscss"
-                    className="opaci-chov--50 pa-2 tx-white py-8">
-                    NPM
-                </a>
-            </div>
-
 
         </div>
+
         <div className="mt-100 pt-100"></div>
 
 
@@ -242,47 +246,82 @@ function Gallery({
         </div> */}
 
     </div>
+
+
+
+
+
     <div className="second-body pos-rel flex-col flex-justify-start tx-white py-100">
         
         <div className=""></div>
-            {/* <hr className="opaci-10 w-100 mt-4 mb-8" /> */}
-            {/* <div className="mt-200"></div> */}
-
-            {/* |{JSON.stringify(example)}| */}
-            <h1 className="  opaci-10  flex-col" onClick={() => { test(); }}>
-                <span className="tx-lx">THRUE</span>
-                <span className="tx-xxxl tx-ls-8">API</span>
+            
+            <h1 className="  opaci-25  flex-col mb-" onClick={() => { test(); }}>
+                <span className="tx-xxxl">CheatSheet</span>
             </h1>
             <div className=" w-max-1080px pos-rel flex-col ">
 
                 <div className="flex-row">
-                    <div className="flex-col">
-                        <div className="flex tx-lgx mt-8">SCRIPTS</div>
-                        <div className="flex-wrap gap-3">
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/scripts/constants" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">CONSTANTS</a>
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/scripts/helpers" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">HELPERS</a>
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/scripts/styles" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">STYLES</a>
-                        </div>
-                        {/* <div className="flex-wrap gap-3 mt-8">
-                            <a target="_blank" href="#" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">DISPLAY</a>
-                        </div> */}
-                        <div className="flex tx-lgx mt-8">Components</div>
-                        <div className="flex-wrap gap-3">
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/ui/pages" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">PAGES</a>
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/ui/parts" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">PARTS</a>
-                        </div>
-                        {/* <div className="flex-wrap gap-3 mt-8">
-                            <a target="_blank" href="#" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">OPACITY</a>
-                        </div> */}
-                        <div className="flex tx-lgx mt-8">GAME ENGINE</div>
-                        <div className="flex-wrap gap-3">
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/thrue/components" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">COMPONENTS</a>
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/thrue/models" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">MODELS</a>
-                            <a target="_blank" href="https://thrue.gitbook.io/thrue/development/thrue/scene" className="tx-white flex bg-w-10 px-4 py-2 opaci-chov--50 bord-r-8">SCENE</a>
+                        <div className="flex-col">
+                            <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
+                            <div className="flex-wrap gap-3">
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    POSITION
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    SIZE
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    INDEX
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    SPACING
+                                </button>
+                            </div>
+                            <div className="flex-wrap gap-3 mt-8">
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    DISPLAY
+                                </button>
+                            </div>
+                            <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
+                                UPDATE
+                            </div>
+                            <div className="flex-wrap gap-3">
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    TEXT
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    BACKGROUND
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    FILTER
+                                </button>
+                            </div>
+                            <div className="flex-wrap gap-3 mt-8">
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    OPACITY
+                                </button>
+                            </div>
+                            <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
+                                BEHAVE
+                            </div>
+                            <div className="flex-wrap gap-3">
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    CURSOR
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    MEDIA QUERY
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    ANIMATION
+                                </button>
+                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
+                                    EXTRA
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
 
             
             <div className=" flex gap-2 mt-100 ">
@@ -300,8 +339,13 @@ function Gallery({
                 </a>
             </div>
     </div>
-    <div className="body pos-rel flex-col flex-justify-start">
-        <div className="mt-200 pt-200"></div>
+
+
+    
+    <div className="body pos-rel flex-col flex-justify-start pt-8 noverflow">
+        
+        <img style={{transform:"translateY(150px)"}} src="/img/ibis.png"/>
+        
     </div>
     </>)
 }
