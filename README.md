@@ -11,7 +11,10 @@ Alternatively, you can include the CSS file directly in your HTML using the foll
 <link rel="stylesheet" href="https://unpkg.com/csscss@latest/index.css">
 ```
 
-
+Latest Demo: [https://csscss.vercel.app/](https://csscss.vercel.app/)
+Github Demo: [https://3dunoabraham.github.io/csscss/](https://3dunoabraham.github.io/csscss/)
+NPM Package: [https://www.npmjs.com/package/csscss](https://www.npmjs.com/package/csscss)
+Docs: [https://tresd1.gitbook.io/csscss/](https://tresd1.gitbook.io/csscss/)
 
 ## Features
 CSSCSS includes a wide range of utility classes that are organized into different categories based on their purpose. Here's an overview of what you can expect:
