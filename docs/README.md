@@ -2,6 +2,7 @@
 #### Utility-first CSS framework.
 
 
+# Create
 ## Position
 /* ----------------------------------------------- POSITION ----------------------------------------------- */
 /* POS *//* EDGE ALIGN *//* Z-INDEX *//* TRANSLATE */
@@ -25,7 +26,8 @@ Classes for controlling the positioning of elements on the page
 /* MARGIN *//* HORIZONTAL *//* VERTICAL */
 
 
-## STRUCTURE
+# Update
+## DISPLAY
 /* ------------------------------------------ STRUCTURE ------------------------------------------ */
 /* DISPLAY *//* FLEX *//* FLEX ALIGN *//* SPECIAL SPECIFIC *//* FLEX GAP */
 * display property of elements, such as .hidden, .none, .block, and .flex.
@@ -58,6 +60,7 @@ Classes for controlling the positioning of elements on the page
 * decoration of text, such as .nodeco, .nowrap, and .strikethrough.
 
 
+# Behave
 ## CURSOR
 /* ------------------------------------------ CURSOR ------------------------------------------ */
 

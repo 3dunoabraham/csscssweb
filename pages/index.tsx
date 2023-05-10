@@ -48,6 +48,9 @@ function Gallery({
     <div className="body pos-rel flex-col flex-justify-start">
         <div className="mt-100 Q_md_x"></div>
         <div className="tx-white my-4 flex">
+            <img width={40} src="/img/orb.png" className="pa-2"
+                style={{filter:"saturate(0.75)"}}
+            />
             <div className="flex-align-self-center tx-lgx">
                 CSSCSS
             </div>
@@ -108,7 +111,7 @@ function Gallery({
                     <span className="tx-bold-2 mb-2">Build fast, <br /> use CSS.</span>
                     {/* <span className="tx-bold-3 mb-4">DCA</span> */}
                 </h1>
-                <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg" target="_blank"
+                <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg opaci-chov--75" target="_blank"
                     href="https://3dunoabraham.github.io/csscss/"
                     style={{boxShadow:"0px 0px 25px #CF589433"}}
                 >
@@ -135,6 +138,21 @@ function Gallery({
                 Docs
             </a>
         </div>
+        <div className="pos-abs hover-4  top-25p" style={{left:"-125px"}}  >
+            <div className="flex-col">
+
+                <img width={300} src="/img/ibis2.png"/>
+                <div className=""> 
+                    <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg opaci-chov--75" target="_blank"
+                        href="https://3dunoabraham.github.io/csscss/"
+                        style={{boxShadow:"0px 0px 25px #CF589433", filter:"invert(0.9)"}}
+                    >
+                        --> Donate
+                    </a>    
+                </div>
+            </div>
+        </div>
+
 
         {/* Images will go here */}
         <div className="flex-col flex-justify-center huerotate-1  tx-white" >
@@ -184,7 +202,7 @@ function Gallery({
 </div> */}
             <div className=" w-max-1080px pos-rel flex-col ">
 
-                <div className="flex-row">
+                <div className="flex-wrap gap-8">
                     <div className="flex-col">
                         <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
                         <div className="flex-wrap gap-3">
@@ -196,6 +214,8 @@ function Gallery({
                         <div className="flex-wrap gap-3 mt-8">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
                         </div>
+                    </div>
+                    <div className="flex-col">
                         <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">UPDATE</div>
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">TEXT</button>
@@ -205,6 +225,8 @@ function Gallery({
                         <div className="flex-wrap gap-3 mt-8">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
                         </div>
+                    </div>
+                    <div className="flex-col">
                         <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">BEHAVE</div>
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">CURSOR</button>
