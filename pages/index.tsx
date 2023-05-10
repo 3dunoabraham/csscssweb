@@ -147,7 +147,7 @@ function Gallery({
                         href="https://3dunoabraham.github.io/csscss/"
                         style={{boxShadow:"0px 0px 25px #CF589433", filter:"invert(0.9)"}}
                     >
-                        --> Donate
+                        +++ Donate
                     </a>    
                 </div>
             </div>
