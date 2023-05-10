@@ -261,88 +261,128 @@ function Gallery({
             <div className=" w-max-1080px pos-rel flex-col ">
 
                 <div className="flex-row">
-                        <div className="flex-col">
+                        <div className="flex-col pa-2">
                             <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
                             <div className="flex-wrap gap-3">
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    POSITION
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.pos-rel</div>
+                                    <div className="pa-2">.pos-fix</div>
+                                    <div className="pa-2">.top-0</div>
+                                    <div className="pa-2">.left-50p</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    SIZE
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.w-50 h-min-100vh</div>
+                                    <div className="pa-2">.h-80px</div>
+                                    <div className="pa-2">.w-max-200px</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    INDEX
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.z-10</div>
+                                    <div className="pa-2">.z-100</div>
+                                    <div className="pa-2">.z--1</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    SPACING
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.pa-0</div>
+                                    <div className="pa-2">.px-8</div>
+                                    <div className="pa-2">.Q_xs_px-2</div>
+                                    <div className="pa-2">.my-100 </div>
                                 </button>
                             </div>
                             <div className="flex-wrap gap-3 mt-8">
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    DISPLAY
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.block</div>
+                                    <div className="pa-2">.flex</div>
+                                    <div className="pa-2">.hidden</div>
                                 </button>
                             </div>
                             <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
                                 UPDATE
                             </div>
                             <div className="flex-wrap gap-3">
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    TEXT
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.tx-sm</div>
+                                    <div className="pa-2">.tx-lg</div>
+                                    <div className="pa-2">.tx-lgx</div>
+                                    <div className="pa-2">.tx-xxxl</div>
+                                    <div className="pa-2">.tx-ls-3</div>
+                                    <div className="pa-2">.tx-bold-6</div>
+                                    <div className="pa-2">.tx-sans</div>
+                                    <div className="pa-2">.nodeco</div>
+                                    <div className="pa-2">.tx-shadow-3</div>
+                                    <div className="pa-2">.tx-white</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    BACKGROUND
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">._ddg</div>
+                                    <div className="pa-2">.bg-b-50</div>
+                                    <div className="pa-2">.bg-green-50</div>
+                                    <div className="pa-2">.bg-glass-1</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    FILTER
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.invert</div>
+                                    <div className="pa-2">.blur-1</div>
+                                    <div className="pa-2">.scale-50</div>
+                                    <div className="pa-2">.scale-200</div>
+                                    <div className="pa-2">.rot-50</div>
+                                    <div className="pa-2">.box-shadow-2</div>
                                 </button>
                             </div>
                             <div className="flex-wrap gap-3 mt-8">
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    OPACITY
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.opaci-50</div>
+                                    <div className="pa-2">.opaci-chov--50</div>
+                                    <div className="pa-2">.opaci-cahov-75</div>
+                                    <div className="pa-2">.opaci-cbhov-75</div>
                                 </button>
                             </div>
                             <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
                                 BEHAVE
                             </div>
                             <div className="flex-wrap gap-3">
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    CURSOR
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.noclick</div>
+                                    <div className="pa-2">.grab</div>
+                                    <div className="pa-2">.clickble</div>
+                                    <div className="pa-2">.pointer</div>
+                                    <div className="pa-2">.waitcursor</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    MEDIA QUERY
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.Q_xs_md_flex-1</div>
+                                    <div className="pa-2">.Q_xs_xl_flex-row</div>
+                                    <div className="pa-2">.Q_xs_w-10</div>
+                                    <div className="pa-2">.Q_sm</div>
+                                    <div className="pa-2">.Q_md_x</div>
+                                    <div className="pa-2">.Q_xs_pa-4</div>
                                 </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    ANIMATION
-                                </button>
-                                <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">
-                                    EXTRA
+                                <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
+                                    <div className="pa-2">.spin-2</div>
+                                    <div className="pa-2">.hover-4</div>
+                                    <div className="pa-2">.appear-appear</div>
+                                    <div className="pa-2">.appear-once-1</div>
+                                    <div className="pa-2">.huerotate-1</div>
+                                    <div className="pa-2">.shake-2</div>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-            
-            <div className=" flex gap-2 mt-100 ">
-                <a target="_blank" href="https://thrue.gitbook.io/thrue/"
-                    className="opaci-chov--50 pa-2 tx-white py-8">
-                    API DOCS
-                </a>
-                <a target="_blank" href="https://github.com/3dunoabraham/thrue"
-                    className="opaci-chov--50 pa-2 tx-white py-8">
-                    GITHUB
-                </a>
-                <a target="_blank" href="https://thrue-beta.vercel.app/"
-                    className="opaci-chov--50 pa-2 tx-white py-8">
-                    DEMO
-                </a>
-            </div>
     </div>
 
 
     
     <div className="body pos-rel flex-col flex-justify-start pt-8 noverflow">
+
+            
+        <div className=" flex-col gap-2 mt-100 ">
+            <a target="_blank" href="https://tresd1.gitbook.io/csscss/blog/"
+                className="opaci-chov--50 pa-2 tx-lx tx-white py-4 tx-center tx-ls-8 gap-4 flex-col">
+                <div>CSSCSS</div>
+                <div>BLOG</div>
+            </a>
+            {/* <a target="_blank" href="https://3dunoabraham.github.io/csscss"
+                className="opaci-chov--50 pa-2 tx-lg tx-white py-8">
+                DEMO
+            </a> */}
+        </div>
         
         <img style={{transform:"translateY(100px)"}} width={300} src="/img/ibis.png"/>
         

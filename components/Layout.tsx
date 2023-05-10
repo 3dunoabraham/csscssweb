@@ -28,8 +28,8 @@ export default ({
 				
 				{/* <Link target="_blank" href="https://gamearteesan.gitbook.io/arteesan/styles/core-css"> */}
 					<a target="_blank" href="https://duno.vercel.app/" className="pa-2 tx-white pa-8 block opaci-chov--50 nodeco">
-					<div className="opaci-50">Coded by</div>
-					<div className="underline">Abraham Duno</div>
+					<div className="opaci-50">Developed by</div>
+					<div className="underline tx-lg">Abraham Duno</div>
 				</a>
 					{/* <a target="_blank" href="/cv.pdf" className="pa-2 tx-white py-8">CV</a> */}
 				{/* </Link> */}
