@@ -134,7 +134,6 @@ Classes for controlling the positioning of elements on the page
 
 
 
-
 graph LR;
 
     subgraph Behave
@@ -166,12 +165,13 @@ graph LR;
             style border_types_side_variations fill:#ffccaa                        
         end
 
-        style Behave fill:#f9f9f9
+        style Border fill:#f9f9f9
+        style BorderRadius fill:#f9f9f9
     end
 
 
 
-    subgraph Updated            
+    subgraph Update          
         subgraph Background
             background --> background_init
             background_init(".bg-? | ddg") -->|color| background_types_color("red-? | green-? | blue-?")
@@ -206,11 +206,39 @@ graph LR;
             style opacity_types_basichover fill:#ffccaa
             style opacity_types_clicknhover fill:#ffccaa
             style opacity_types_hover_nested_variations fill:#ffccaa
+            style opacity fill:#ffffff
         end
 
-        
+        subgraph Filter
+            invert --> invert_init(".invert")
+            blur --> blur_init(".blur-?")
+            blur_init --> blur_types("1 | 2 | ... | 14")
+
+            scale --> scale_init(".scale-?")
+            scale_init --> scale_types("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
+            scale_init --> scale_types_hover("hov-?")
+            scale_types_hover --> scale_types_hover_variations("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
+
+            rotation --> rot_init(".rot-?")
+            rot_init --> rot_types("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
+            rot_init --> rot_types_hover("hov-?")
+            rot_types_hover --> rot_types_hover_variations("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
+
+            style invert fill:#ffffff
+            style scale fill:#ffffff
+            style blur fill:#ffffff
+            style blur_types fill:#ffccaa
+            style scale_types fill:#ffccaa
+            style scale_types_hover_variations fill:#ffccaa
+            style rotation fill:#ffffff
+            style rot_types fill:#ffccaa
+            style rot_types_hover_variations fill:#ffccaa
+        end
+
+        style Background fill:#f9f9f9
+        style Opacity fill:#f9f9f9
+        style Filter fill:#f9f9f9
     end
-    style Updated fill:#f9f9f9
 
 
 
