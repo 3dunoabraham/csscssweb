@@ -27,3 +27,24 @@
 ## CURSOR
 ## Opacity
 * opacity of elements, such as .opacity-50 and .opacity-hover-25.
+
+
+
+
+
+
+'''lua
+graph LR;
+    subgraph Update
+        subgraph Display
+            display
+            display --> display_init(".block | .flex | .none")
+            display_init -->|flex| display_flex("flex-?")
+            display_flex -->|align| display_align("`center | row | col | row-r | col-r`")
+            display_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
+            
+        end
+
+        style Update fill:#f9f9f9
+    end
+'''
