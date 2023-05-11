@@ -135,14 +135,9 @@ Classes for controlling the positioning of elements on the page
 
 
 
-
-
-
-
 graph LR;
 
     subgraph Behave
-
         subgraph Border
             border --> border_init
             border_init("noborder | .border-?")
@@ -151,7 +146,6 @@ graph LR;
             `")
             border_types_color --> border_types_color_variations("? | 50")
 
-            
             style border fill:#ffffff
             style border_types_color_variations fill:#ffccaa                        
         end
@@ -167,27 +161,23 @@ graph LR;
                 5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p
             `")
 
-
-            
             style borderradius fill:#ffffff
             style border_types fill:#ffccaa                        
             style border_types_side_variations fill:#ffccaa                        
         end
 
-
         style Behave fill:#f9f9f9
     end
 
 
-    subgraph Update
-            
+
+    subgraph Updated            
         subgraph Background
             background --> background_init
             background_init(".bg-? | ddg") -->|color| background_types_color("red-? | green-? | blue-?")
             background_init(".bg-?") -->|black & white| background_types_bnw("b-? | w-?")
             background_init(".bg-?") -->|glassmorphism| background_types_glass("glass-")
             background -->|debug| background_debug("_ddr | _ddg | _ddb")
-            
             background_types_bnw --> background_types_bnw_variations("`
                 2 | 5 | 10 | 20 | ... | 50 | 75
             `")
@@ -198,28 +188,33 @@ graph LR;
                 1 | 2 | ... | 6 | 10 | 20 | 50 | 100
             `")
 
-
             style background fill:#ffffff
             style background_types_color_variations fill:#ffccaa                        
             style background_types_bnw_variations fill:#ffccaa                        
             style background_types_glass_variations fill:#ffccaa                        
         end
 
-
         subgraph Opacity
-            opacity --> opacity_init
-            opacity_init(".opaci-?") --> opacity_types("? | ")
+            opacity --> opacity_init(".opaci-?")
+            opacity_init --> opacity_types_basic("`0 | 5 | 10 | ... | 30 | 40 | 50 | 75 | 100`")
+            opacity_init --> opacity_types_hover("hov-? | chov-? | hov--? | chov--?")
+            opacity_init --> opacity_types_hover_nested("cahov-? | cbhov-? | cahov--? | cbhov--?")
+            opacity_types_hover -->|hover| opacity_types_basichover("`5 | 10 | 25 | 50 | 75 | 100`")
+            opacity_types_hover -->|clickhover| opacity_types_clicknhover("`0 | 5 | 10 | ... | 30 | 40 | 50 | 75 | 100`")
+            opacity_types_hover_nested --> opacity_types_hover_nested_variations("`5 | 10 | 25 | 50 | 75 | 100`")
+            style opacity_types_basic fill:#ffccaa
+            style opacity_types_basichover fill:#ffccaa
+            style opacity_types_clicknhover fill:#ffccaa
+            style opacity_types_hover_nested_variations fill:#ffccaa
         end
 
-
-        style Update fill:#f9f9f9
+        
     end
-
+    style Updated fill:#f9f9f9
 
 
 
     subgraph Structure
-
         subgraph Spacing
             padding --> padding_init
             padding_init(".p?")
@@ -227,7 +222,6 @@ graph LR;
                 a-? | x-? | y-? | t-? | b-? | l-? | r-? 
             `")
             padding_types --> padding_variations("0 | 1 | ... | 8 | 100 | 1500 | 200")
-            
             margin --> margin_init
             margin_init(".m?")
             margin_init --> margin_types("`
@@ -237,14 +231,11 @@ graph LR;
                 0 | 1 | ... | 8 | 100 | 1500 | 200
             `")
             
-
-            
             style padding fill:#ffffff
             style margin fill:#ffffff
             style padding_variations fill:#ffccaa  
             style margin_variations fill:#ffccaa            
         end
-
 
         subgraph Display
             display --> display_types
@@ -262,6 +253,7 @@ graph LR;
             style display_gap fill:#ffccaa                        
             style display_basis fill:#ffccaa                        
         end
+
         subgraph Text
             text --> text_init
             text_init -->|font family| text_types_fontfamily("sans | roman")
@@ -273,19 +265,17 @@ graph LR;
             `")
             text_init -->|"weight"| text_types_bold("bold") --> text_types_bold_variations("2 | 3 | ... | 9")
             text_init -->|"align"| text_types_align("center | end | start")
-            text_init -->|"color"| text_types_color("red | white | black") --> text_types_color_variations("25 | 50 | 75")
+            text_init -->|"spacing"| text_types_spacing("ls-? | ws-?")
+            text_types_spacing --> text_types_spacing_variations("1 | 2 | ... | 8 | 10 | 15 | 25")
             text_init -->|"lineheight"| text_types_lineheight("lineheight") --> text_types_lineheight_variations("100 | 150 | 200")
-            text_init -->|"letter"| text_types_letterspacing("letter") --> text_types_letterspacing_variations("1 | 2 | ... | 8 | 10 | 15 | 25")
-            text_init -->|"word"| text_types_wordspacing("word") --> text_types_wordspacing_variations("1 | 2 | ... | 8 | 20")
+            text_init -->|"color"| text_types_color("red | white | black") --> text_types_color_variations("25 | 50 | 75")
             text_init -->|"shadow"| text_types_shadow("shadow") --> text_types_shadow_variations("1 | 2 | ... | 5")
             
             style text fill:#ffffff
             style text_types_bold_variations fill:#ffccaa
             style text_types_color_variations fill:#ffccaa
-            
             style text_types_lineheight_variations fill:#ffccaa
-            style text_types_letterspacing_variations fill:#ffccaa
-            style text_types_wordspacing_variations fill:#ffccaa
+            style text_types_spacing_variations fill:#ffccaa
             style text_types_shadow_variations fill:#ffccaa
         end
     
@@ -293,14 +283,13 @@ graph LR;
     end
 
 
+
     subgraph Create
         subgraph Position
             position --> position_init
             position_init(.pos-?) --> position_types("rel | abs | fix | fixed")
-
             edge(edge) --> edge_types(".top-? | .bottom-? | .left-? | .right-?")
             edge_types --> edge_variations("0 | 25p | 50p | 75p")
-
             translate --> translate_init
             translate_init(.translate-?) --> translate_types("x-? | x--? | y-? | y--?")
             translate_types --> translate_variations("`25 | 50 | 75 | 100 | 150 | 200 | 250`")
@@ -313,16 +302,13 @@ graph LR;
             style translate_variations fill:#ffccaa            
         end
 
-
-
         subgraph Size
             size --> size_init
             size_init(".w-? | .h-?") --> size_types("? | min-? | max-?")
             size_types -->|percent| size_types_percent("`
                 5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100
             `")
-            size_types -->|pixel| size_types_pixel
-            
+            size_types -->|pixel| size_types_pixel            
             size_types_pixel("`
                 50 | 80 | 100 | 120 | 150 | 200 | 250 | 220 | 300 | 400 | 450| 500 | 600 | 650 | 700 | 1080
             `")
@@ -342,10 +328,7 @@ graph LR;
             zindex_types --> zindex_variations("`
                 1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001
             `")
-
             style zindex_variations fill:#ffccaa            
         end
-
-
         style Create fill:#f9f9f9
     end
