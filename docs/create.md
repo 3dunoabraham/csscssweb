@@ -57,8 +57,6 @@ Classes for controlling the spaces around and inside of elements
 
 
 
-
-
 graph LR;
     subgraph Create
         subgraph Location
@@ -70,11 +68,11 @@ graph LR;
 
             zindex --> zindex_init
             zindex_init(.z-?) --> zindex_types("? | -?")
-            zindex_types --> zindex_variations("1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001")
+            zindex_types --> zindex_variations("`1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001`")
 
             translate --> translate_init
             translate_init(.translate-?) --> translate_types("x-? | x--? | y-? | y--?")
-            translate_types --> translate_variations("25 | 50 | 75 | 100 | 150 | 200 | 250")
+            translate_types --> translate_variations("`25 | 50 | 75 | 100 | 150 | 200 | 250`")
 
             style position fill:#ffffff
             style edge fill:#ffffff
@@ -90,14 +88,37 @@ graph LR;
         subgraph Size
             size --> size_init
             size_init("w- | h-") --> size_types("? | min-? | max-?")
-            size_types --> size_variations_percent("5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100")
-            size_types --> size_variations_pixel("w- | h-")
-            size_types --> size_variations_viewport("w- | h-")
+            size_types -->|percent| size_variations_percent("`5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100`")
+            size_types -->|pixel| size_variations_pixel
+            
+            size_variations_pixel("`50 | 80 | 100 | 120 | 150 | 200 | 250 | 220 | 300 | 400 | 450| 500 | 600 | 650 | 700 | 1080`")
+            size_variations_pixel --> size_variations_pixel_types("px")
+            size_types -->|viewport| size_variations_viewport("80 | 95 | 90 | 100")
+            size_variations_viewport --> size_variations_viewport_types("vw | vh")
 
             style size fill:#ffffff
             style size_variations_percent fill:#ffccaa            
+            style size_variations_pixel fill:#ffccaa            
+            style size_variations_viewport fill:#ffccaa            
         end
 
+        subgraph Spacing
+            padding --> padding_init
+            padding_init(".p?")
+            padding_init --> padding_types("`a-? | x-? | y-? | t-? | b-? | l-? | r-? `")
+            padding_types --> padding_variations("0 | 1 | ... | 8 | 100 | 1500 | 200")
+            
+            margin --> margin_init
+            margin_init(".p?")
+            margin_init --> margin_types("`a-? | x-? | y-? | t-? | b-? | l-? | r-? `")
+            margin_types --> margin_variations("0 | 1 | ... | 8 | 100 | 1500 | 200")
+            
+            
+            style padding fill:#ffffff
+            style margin fill:#ffffff
+            style padding_variations fill:#ffccaa  
+            style margin_variations fill:#ffccaa            
+        end
 
 
         style Create fill:#f9f9f9
