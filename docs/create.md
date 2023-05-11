@@ -7,8 +7,7 @@
 Classes for controlling the positioning of elements on the page
 
 * Position: "pos-rel" sets the position of an element to relative
-  * variations:
-    * ["rel","abs","fix","fixed"]
+  * types: ("rel","abs","fix","fixed")
 * Edge Alignment: "top-0" and "top-25p" sets the top position of an element to 0 and 25% respectively.
   * types: ("top-","left-","right-","bottom-")
   * variations:
@@ -17,10 +16,10 @@ Classes for controlling the positioning of elements on the page
   * types: ("z-300" or "z--300") for positive 300 or negative 300 z index
   * variations ("z-300" or "z--999"):
     * [1,2,3,5,10,50,100,200,300,400,500,600,700,800,999,1000,1001]
-* Translate: <"z-300" sets the z-index of an element to 300>
-  * types: ("z-300" or "z--300") for positive 300 or negative 300 z index
-  * variations ("z-300" or "z--999"):
-    * [1,2,3,5,10,50,100,200,300,400,500,600,700,800,999,1000,1001]
+* Translate: WIP
+  * types: ("")
+  * variations:
+    * WIP
 
 
 ## Size
