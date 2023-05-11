@@ -308,7 +308,7 @@ function Gallery({
             </h1>
             <div className=" w-max-1080px pos-rel flex-col ">
 
-                <div className="flex-row py-8">
+                <div className="flex-row py-8 mb-8">
                         <div className="flex-col pa-4">
                             <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
                             <div className="flex-wrap gap-3">
@@ -328,24 +328,22 @@ function Gallery({
                                     <div className="pa-2">.z-100</div>
                                     <div className="pa-2">.z--1</div>
                                 </button>
+                            </div>
+                            <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
+                                STRUCTURE
+                            </div>
+                            <div className="flex-wrap gap-3 mt-8">
                                 <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
                                     <div className="pa-2">.pa-0</div>
                                     <div className="pa-2">.px-8</div>
                                     <div className="pa-2">.Q_xs_px-2</div>
                                     <div className="pa-2">.my-100 </div>
                                 </button>
-                            </div>
-                            <div className="flex-wrap gap-3 mt-8">
                                 <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
                                     <div className="pa-2">.block</div>
                                     <div className="pa-2">.flex</div>
                                     <div className="pa-2">.hidden</div>
                                 </button>
-                            </div>
-                            <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
-                                UPDATE
-                            </div>
-                            <div className="flex-wrap gap-3">
                                 <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
                                     <div className="pa-2">.tx-sm</div>
                                     <div className="pa-2">.tx-lg</div>
@@ -358,6 +356,11 @@ function Gallery({
                                     <div className="pa-2">.tx-shadow-3</div>
                                     <div className="pa-2">.tx-white</div>
                                 </button>
+                            </div>
+                            <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
+                                UPDATE
+                            </div>
+                            <div className="flex-wrap gap-3">
                                 <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
                                     <div className="pa-2">._ddg</div>
                                     <div className="pa-2">.bg-b-50</div>
@@ -384,7 +387,7 @@ function Gallery({
                             <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">
                                 BEHAVE
                             </div>
-                            <div className="flex-wrap gap-3">
+                            <div className="flex-wrap gap-3">                                
                                 <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
                                     <div className="pa-2">.noclick</div>
                                     <div className="pa-2">.grab</div>
