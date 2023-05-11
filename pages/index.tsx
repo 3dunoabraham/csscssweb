@@ -54,7 +54,7 @@ function Gallery({
             <div className="flex-align-self-center tx-lgx">
                 CSSCSS
             </div>
-            <div className="pr-1 bg-w-10 mx-8">
+            <div className="pr-1 bg-w-10 mx-5">
             </div>
             <div className="flex-col flex-align-start">
                 <div className="flex-col tx-smd">Utility First CSS</div>
