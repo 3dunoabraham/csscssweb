@@ -137,6 +137,8 @@ Classes for controlling the positioning of elements on the page
 
 
 
+
+
 graph LR;
 
     subgraph Behave
@@ -144,7 +146,9 @@ graph LR;
         subgraph Border
             border --> border_init
             border_init("noborder | .border-?")
-            border_init -->|color| border_types_color("`red-? | green-? | blue-? | white-? | grey-? | lgrey-?`")
+            border_init -->|color| border_types_color("`
+                red-? | green-? | blue-? | white-? | grey-? | lgrey-?
+            `")
             border_types_color --> border_types_color_variations("? | 50")
 
             
@@ -155,9 +159,13 @@ graph LR;
         subgraph BorderRadius
             borderradius("border radius") --> borderradius_init
             borderradius_init(".bord-r-?")
-            borderradius_init -->|all sides| border_types("`5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p`")
+            borderradius_init -->|all sides| border_types("`
+                5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p
+            `")
             borderradius_init -->|2 corners| border_types_side("`t-? | b-? | l-? | r-?`")
-            border_types_side --> border_types_side_variations("`5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p`")
+            border_types_side --> border_types_side_variations("`
+                5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p
+            `")
 
 
             
@@ -180,9 +188,15 @@ graph LR;
             background_init(".bg-?") -->|glassmorphism| background_types_glass("glass-")
             background -->|debug| background_debug("_ddr | _ddg | _ddb")
             
-            background_types_bnw --> background_types_bnw_variations("2 | 5 | 10 | 20 | ... | 50 | 75")            
-            background_types_color --> background_types_color_variations("25 | 50 | 75")
-            background_types_glass --> background_types_glass_variations("1 | 2 | ... | 6 | 10 | 20 | 50 | 100")
+            background_types_bnw --> background_types_bnw_variations("`
+                2 | 5 | 10 | 20 | ... | 50 | 75
+            `")
+            background_types_color --> background_types_color_variations("`
+                25 | 50 | 75
+            `")
+            background_types_glass --> background_types_glass_variations("`
+                1 | 2 | ... | 6 | 10 | 20 | 50 | 100
+            `")
 
 
             style background fill:#ffffff
@@ -192,6 +206,10 @@ graph LR;
         end
 
 
+        subgraph Opacity
+            opacity --> opacity_init
+            opacity_init(".opaci-?") --> opacity_types("? | ")
+        end
 
 
         style Update fill:#f9f9f9
@@ -205,14 +223,21 @@ graph LR;
         subgraph Spacing
             padding --> padding_init
             padding_init(".p?")
-            padding_init --> padding_types("`a-? | x-? | y-? | t-? | b-? | l-? | r-? `")
+            padding_init --> padding_types("`
+                a-? | x-? | y-? | t-? | b-? | l-? | r-? 
+            `")
             padding_types --> padding_variations("0 | 1 | ... | 8 | 100 | 1500 | 200")
             
             margin --> margin_init
-            margin_init(".p?")
-            margin_init --> margin_types("`a-? | x-? | y-? | t-? | b-? | l-? | r-? `")
-            margin_types --> margin_variations("0 | 1 | ... | 8 | 100 | 1500 | 200")
+            margin_init(".m?")
+            margin_init --> margin_types("`
+                a-? | x-? | y-? | t-? | b-? | l-? | r-? 
+            `")
+            margin_types --> margin_variations("`
+                0 | 1 | ... | 8 | 100 | 1500 | 200
+            `")
             
+
             
             style padding fill:#ffffff
             style margin fill:#ffffff
@@ -222,16 +247,46 @@ graph LR;
 
 
         subgraph Display
-            display --> display_init
-            display_init(".block | .flex | .none")
-            display_init -->|flex| display_flex("flex-?")
-            display_flex -->|align| display_align("`center | row | col | row-r | col-r`")
-            display_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
+            display --> display_types
+            display_types(".block | .flex | .none")
+            display_types -->|flex| display_types_flex("flex-?")
+            display_types_flex -->|direction| display_flex_direction("`row | col | row-r | col-r`")
+            display_types_flex -->|scheme| display_flex_scheme("`center | wrap | between | around`")
+            display_types_flex -->|alignment| display_flex_alignment("`align | justify`")
+            display_flex_alignment -->|align| display_flex_alignment_variations_a("start | end | stretch")
+            display_flex_alignment -->|justify| display_flex_alignment_variations_b("start | end | between | around")
+            display_types_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
+            display_types_flex -->|basis| display_basis("`1 | 2 | 3`")
 
+            style display fill:#ffffff                        
             style display_gap fill:#ffccaa                        
+            style display_basis fill:#ffccaa                        
         end
         subgraph Text
-            text
+            text --> text_init
+            text_init -->|font family| text_types_fontfamily("sans | roman")
+            text_init(".tx-?") -->|font size| text_types_size("`
+                xxs | xs | xsm |
+                sm | smd |
+                md | mdl | lg | lgx | lx |
+                xl | xxl | xxxl
+            `")
+            text_init -->|"weight"| text_types_bold("bold") --> text_types_bold_variations("2 | 3 | ... | 9")
+            text_init -->|"align"| text_types_align("center | end | start")
+            text_init -->|"color"| text_types_color("red | white | black") --> text_types_color_variations("25 | 50 | 75")
+            text_init -->|"lineheight"| text_types_lineheight("lineheight") --> text_types_lineheight_variations("100 | 150 | 200")
+            text_init -->|"letter"| text_types_letterspacing("letter") --> text_types_letterspacing_variations("1 | 2 | ... | 8 | 10 | 15 | 25")
+            text_init -->|"word"| text_types_wordspacing("word") --> text_types_wordspacing_variations("1 | 2 | ... | 8 | 20")
+            text_init -->|"shadow"| text_types_shadow("shadow") --> text_types_shadow_variations("1 | 2 | ... | 5")
+            
+            style text fill:#ffffff
+            style text_types_bold_variations fill:#ffccaa
+            style text_types_color_variations fill:#ffccaa
+            
+            style text_types_lineheight_variations fill:#ffccaa
+            style text_types_letterspacing_variations fill:#ffccaa
+            style text_types_wordspacing_variations fill:#ffccaa
+            style text_types_shadow_variations fill:#ffccaa
         end
     
         style Structure fill:#f9f9f9
@@ -239,7 +294,7 @@ graph LR;
 
 
     subgraph Create
-        subgraph Location
+        subgraph Position
             position --> position_init
             position_init(.pos-?) --> position_types("rel | abs | fix | fixed")
 
@@ -262,11 +317,15 @@ graph LR;
 
         subgraph Size
             size --> size_init
-            size_init(".w- | .h-") --> size_types("? | min-? | max-?")
-            size_types -->|percent| size_types_percent("`5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100`")
+            size_init(".w-? | .h-?") --> size_types("? | min-? | max-?")
+            size_types -->|percent| size_types_percent("`
+                5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100
+            `")
             size_types -->|pixel| size_types_pixel
             
-            size_types_pixel("`50 | 80 | 100 | 120 | 150 | 200 | 250 | 220 | 300 | 400 | 450| 500 | 600 | 650 | 700 | 1080`")
+            size_types_pixel("`
+                50 | 80 | 100 | 120 | 150 | 200 | 250 | 220 | 300 | 400 | 450| 500 | 600 | 650 | 700 | 1080
+            `")
             size_types_pixel --> size_types_pixel_types("px")
             size_types -->|viewport| size_types_viewport("80 | 95 | 90 | 100")
             size_types_viewport --> size_types_viewport_types("vw | vh")
@@ -280,7 +339,9 @@ graph LR;
         subgraph Depth
             zindex --> zindex_init
             zindex_init(.z-?) --> zindex_types("? | -?")
-            zindex_types --> zindex_variations("`1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001`")
+            zindex_types --> zindex_variations("`
+                1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001
+            `")
 
             style zindex_variations fill:#ffccaa            
         end
