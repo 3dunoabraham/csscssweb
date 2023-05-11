@@ -136,8 +136,41 @@ Classes for controlling the positioning of elements on the page
 
 
 
-
 graph LR;
+
+    subgraph Update
+        subgraph Display
+            display --> display_init
+            display_init(".block | .flex | .none")
+            display_init -->|flex| display_flex("flex-?")
+            display_flex -->|align| display_align("`center | row | col | row-r | col-r`")
+            display_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
+
+            style display_gap fill:#ffccaa                        
+        end
+            
+        subgraph Background
+            background --> background_init
+            background_init(".bg-? | ddg") -->|color| background_types_color("red-? | green-? | blue-?")
+            background_init(".bg-?") -->|black & white| background_types_bnw("b-? | w-?")
+            background_init(".bg-?") -->|glassmorphism| background_types_glass("glass-")
+            background -->|debug| background_debug("_ddr | _ddg | _ddb")
+            
+            background_types_bnw --> background_types_bnw_variations("2 | 5 | 10 | 20 | ... | 50 | 75")            
+            background_types_color --> background_types_color_variations("25 | 50 | 75")
+            background_types_glass --> background_types_glass_variations("1 | 2 | ... | 6 | 10 | 20 | 50 | 100")
+
+
+            style background fill:#ffffff
+            style background_types_color_variations fill:#ffccaa                        
+            style background_types_bnw_variations fill:#ffccaa                        
+            style background_types_glass_variations fill:#ffccaa                        
+        end
+
+        style Update fill:#f9f9f9
+    end
+
+
     subgraph Create
         subgraph Location
             position --> position_init
@@ -204,15 +237,3 @@ graph LR;
         style Create fill:#f9f9f9
     end
     
-    subgraph Update
-        subgraph Display
-            display
-            display --> display_init(".block | .flex | .none")
-            display_init -->|flex| display_flex("flex-?")
-            display_flex -->|align| display_align("`center | row | col | row-r | col-r`")
-            display_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
-            
-        end
-
-        style Update fill:#f9f9f9
-    end
