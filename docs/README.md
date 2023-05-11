@@ -165,8 +165,16 @@ graph LR;
             style border_types_side_variations fill:#ffccaa                        
         end
 
+        subgraph Cursor
+            cursor --> cursor_types(".cursor | .pointer | .clickble | .grab | .grabble | .stopcursor | .waitcursor")
+            cursor -->|events| cursor_events_types(".noclick | .nocursor | .noselect")
+
+            style cursor fill:#ffffff
+        end
+
         style Border fill:#f9f9f9
         style BorderRadius fill:#f9f9f9
+        style Cursor fill:#f9f9f9
     end
 
 
@@ -220,9 +228,9 @@ graph LR;
             scale_types_hover --> scale_types_hover_variations("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
 
             rotation --> rot_init(".rot-?")
-            rot_init --> rot_types("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
+            rot_init --> rot_types("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250 | 270`")
             rot_init --> rot_types_hover("hov-?")
-            rot_types_hover --> rot_types_hover_variations("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250`")
+            rot_types_hover --> rot_types_hover_variations("`50 | 60 | 70 | 90 | 110 | 120 | 150 | 160 | 200 | 250 | 270`")
 
             style invert fill:#ffffff
             style scale fill:#ffffff
