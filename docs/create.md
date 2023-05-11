@@ -51,3 +51,54 @@ Classes for controlling the spaces around and inside of elements
   * types: ("ma-","mt-","mb-","ml-","mr-","mx-","my-")
   * variations:
     * ["0","1","2","3","4","5","6","7","8","9","100","150","200"]
+
+
+
+
+
+
+
+
+graph LR;
+    subgraph Create
+        subgraph Location
+            position --> position_init
+            position_init(.pos-?) --> position_types("rel | abs | fix | fixed")
+
+            edge(edge) --> edge_types(".top-? | .bottom-? | .left-? | .right-?")
+            edge_types --> edge_variations("0 | 25p | 50p | 75p")
+
+            zindex --> zindex_init
+            zindex_init(.z-?) --> zindex_types("? | -?")
+            zindex_types --> zindex_variations("1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001")
+
+            translate --> translate_init
+            translate_init(.translate-?) --> translate_types("x-? | x--? | y-? | y--?")
+            translate_types --> translate_variations("25 | 50 | 75 | 100 | 150 | 200 | 250")
+
+            style position fill:#ffffff
+            style edge fill:#ffffff
+            style zindex fill:#ffffff
+            style translate fill:#ffffff
+            style edge_variations fill:#ffccaa
+            style zindex_variations fill:#ffccaa            
+            style translate_variations fill:#ffccaa            
+        end
+
+
+
+        subgraph Size
+            size --> size_init
+            size_init("w- | h-") --> size_types("? | min-? | max-?")
+            size_types --> size_variations_percent("5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100")
+            size_types --> size_variations_pixel("w- | h-")
+            size_types --> size_variations_viewport("w- | h-")
+
+            style size fill:#ffffff
+            style size_variations_percent fill:#ffccaa            
+        end
+
+
+
+        style Create fill:#f9f9f9
+    end
