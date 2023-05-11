@@ -138,24 +138,48 @@ function Gallery({
                 Docs
             </a>
         </div>
-        <div className="pos-abs hover-4  top-25p" style={{left:"-125px"}}  >
-            <div className="flex-col">
-
-                <img width={300} src="/img/ibis2.png"/>
-                <div className=""> 
-                    <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg opaci-chov--75" target="_blank"
-                        href="https://3dunoabraham.github.io/csscss/"
-                        style={{boxShadow:"0px 0px 25px #CF589433", filter:"invert(0.9)"}}
+        <div className="pos-abs bottom-0 z-1000 translate-y-50" style={{left:"0"}}  >
+            <div className="flex-col tx-xxxl tx-white " >
+                {/* <div className="shake-3">
+                    <div className="pin-60">|</div>
+                </div>
+                <div className="shake-5">
+                    <div className="pin-120">|</div>
+                </div>
+                <div className="shake-4">
+                    <div className="pin-10">|</div>
+                </div>
+                <div className="shake-3">
+                    <div className="pin-6">|</div>
+                </div>
+                <div className="shake-2">
+                    <div className="pin-4">|</div>
+                </div>
+                <div className="shake-5">
+                    <div className="pin-20">|</div>
+                </div> */}
+                {/* <div className="shake-1">
+                    |
+                </div> */}
+                {/* <div className="bg-b-30 px-8 pl-100 py-2 blur-5 bord-r-100p translate-y--100  bottom-0 pos-abs"></div> */}
+                <img width={150} src="/img/ibis2.png" className="pos-rel translate-x--25"/>
+                {/* <img width={300} src="/img/ibis3.png"/>
+                 */}
+                 <div className="flex pl-1 opaci-75"> 
+                    <a className="ml- duno-btn bord-r-50 tx-white py-2 px-8  tx-lg opaci-chov--75" target="_blank"
+                        href="https://tresd1.gitbook.io/csscss/"
+                        style={{boxShadow:"0px 0px 25px #CF589433", filter:"hue-rotate(135deg)"}}
                     >
-                        +++ Donate
+                        Docs
                     </a>    
                 </div>
+                 
             </div>
         </div>
 
 
         {/* Images will go here */}
-        <div className="flex-col flex-justify-center huerotate-1  tx-white" >
+        <div className="flex-col flex-justify-center huerotate-1  tx-white " >
             {/* <div className="w-400px  ">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" >
                       <path  fill="#CF5894"
@@ -202,7 +226,7 @@ function Gallery({
 </div> */}
             <div className=" w-max-1080px pos-rel flex-col ">
 
-                <div className="flex-wrap gap-8">
+                <div className="flex-wrap gap-8 pa-4">
                     <div className="flex-col">
                         <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
                         <div className="flex-wrap gap-3">
@@ -275,15 +299,15 @@ function Gallery({
 
     <div className="second-body pos-rel flex-col flex-justify-start tx-white py-100">
         
-        <div className=""></div>
+        <div className="pt-8"></div>
             
             <h1 className="  opaci-25  flex-col mb-" onClick={() => { test(); }}>
                 <span className="tx-xxxl">Cheat <br /> Sheet</span>
             </h1>
             <div className=" w-max-1080px pos-rel flex-col ">
 
-                <div className="flex-row">
-                        <div className="flex-col pa-2">
+                <div className="flex-row py-8">
+                        <div className="flex-col pa-4">
                             <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
                             <div className="flex-wrap gap-3">
                                 <button className="tx-white bg-w-10 bord-r-8 flex-wrap gap-2">
@@ -394,7 +418,7 @@ function Gallery({
     <div className="body pos-rel flex-col flex-justify-start pt-8 noverflow">
 
             
-        <div className=" flex-col gap-2 mt-100 ">
+        <div className=" flex-col gap-2 my-100 ">
             <a target="_blank" href="https://tresd1.gitbook.io/csscss/blog/"
                 className="opaci-chov--50 pa-2 tx-lx tx-white py-4 tx-center tx-ls-8 gap-4 flex-col">
                 <div>CSSCSS</div>
@@ -406,7 +430,7 @@ function Gallery({
             </a> */}
         </div>
         
-        <img style={{transform:"translateY(100px)"}} width={300} src="/img/ibis.png"/>
+        {/* <img style={{transform:"translateY(100px)"}} width={300} src="/img/ibis.png"/> */}
         
     </div>
     </>)
