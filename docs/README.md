@@ -136,18 +136,42 @@ Classes for controlling the positioning of elements on the page
 
 
 
+
 graph LR;
 
-    subgraph Update
-        subgraph Display
-            display --> display_init
-            display_init(".block | .flex | .none")
-            display_init -->|flex| display_flex("flex-?")
-            display_flex -->|align| display_align("`center | row | col | row-r | col-r`")
-            display_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
+    subgraph Behave
 
-            style display_gap fill:#ffccaa                        
+        subgraph Border
+            border --> border_init
+            border_init("noborder | .border-?")
+            border_init -->|color| border_types_color("`red-? | green-? | blue-? | white-? | grey-? | lgrey-?`")
+            border_types_color --> border_types_color_variations("? | 50")
+
+            
+            style border fill:#ffffff
+            style border_types_color_variations fill:#ffccaa                        
         end
+
+        subgraph BorderRadius
+            borderradius("border radius") --> borderradius_init
+            borderradius_init(".bord-r-?")
+            borderradius_init -->|all sides| border_types("`5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p`")
+            borderradius_init -->|2 corners| border_types_side("`t-? | b-? | l-? | r-?`")
+            border_types_side --> border_types_side_variations("`5 | 8 | 10 | 12 | 15 | 25 | 50 | 100 | 100p`")
+
+
+            
+            style borderradius fill:#ffffff
+            style border_types fill:#ffccaa                        
+            style border_types_side_variations fill:#ffccaa                        
+        end
+
+
+        style Behave fill:#f9f9f9
+    end
+
+
+    subgraph Update
             
         subgraph Background
             background --> background_init
@@ -167,53 +191,16 @@ graph LR;
             style background_types_glass_variations fill:#ffccaa                        
         end
 
+
+
+
         style Update fill:#f9f9f9
     end
 
 
-    subgraph Create
-        subgraph Location
-            position --> position_init
-            position_init(.pos-?) --> position_types("rel | abs | fix | fixed")
-
-            edge(edge) --> edge_types(".top-? | .bottom-? | .left-? | .right-?")
-            edge_types --> edge_variations("0 | 25p | 50p | 75p")
-
-            zindex --> zindex_init
-            zindex_init(.z-?) --> zindex_types("? | -?")
-            zindex_types --> zindex_variations("`1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001`")
-
-            translate --> translate_init
-            translate_init(.translate-?) --> translate_types("x-? | x--? | y-? | y--?")
-            translate_types --> translate_variations("`25 | 50 | 75 | 100 | 150 | 200 | 250`")
-
-            style position fill:#ffffff
-            style edge fill:#ffffff
-            style zindex fill:#ffffff
-            style translate fill:#ffffff
-            style edge_variations fill:#ffccaa
-            style zindex_variations fill:#ffccaa            
-            style translate_variations fill:#ffccaa            
-        end
 
 
-
-        subgraph Size
-            size --> size_init
-            size_init("w- | h-") --> size_types("? | min-? | max-?")
-            size_types -->|percent| size_variations_percent("`5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100`")
-            size_types -->|pixel| size_variations_pixel
-            
-            size_variations_pixel("`50 | 80 | 100 | 120 | 150 | 200 | 250 | 220 | 300 | 400 | 450| 500 | 600 | 650 | 700 | 1080`")
-            size_variations_pixel --> size_variations_pixel_types("px")
-            size_types -->|viewport| size_variations_viewport("80 | 95 | 90 | 100")
-            size_variations_viewport --> size_variations_viewport_types("vw | vh")
-
-            style size fill:#ffffff
-            style size_variations_percent fill:#ffccaa            
-            style size_variations_pixel fill:#ffccaa            
-            style size_variations_viewport fill:#ffccaa            
-        end
+    subgraph Structure
 
         subgraph Spacing
             padding --> padding_init
@@ -234,6 +221,70 @@ graph LR;
         end
 
 
+        subgraph Display
+            display --> display_init
+            display_init(".block | .flex | .none")
+            display_init -->|flex| display_flex("flex-?")
+            display_flex -->|align| display_align("`center | row | col | row-r | col-r`")
+            display_flex -->|gap| display_gap("`1 | 2 | ... | 8 | 50`")
+
+            style display_gap fill:#ffccaa                        
+        end
+        subgraph Text
+            text
+        end
+    
+        style Structure fill:#f9f9f9
+    end
+
+
+    subgraph Create
+        subgraph Location
+            position --> position_init
+            position_init(.pos-?) --> position_types("rel | abs | fix | fixed")
+
+            edge(edge) --> edge_types(".top-? | .bottom-? | .left-? | .right-?")
+            edge_types --> edge_variations("0 | 25p | 50p | 75p")
+
+            translate --> translate_init
+            translate_init(.translate-?) --> translate_types("x-? | x--? | y-? | y--?")
+            translate_types --> translate_variations("`25 | 50 | 75 | 100 | 150 | 200 | 250`")
+
+            style position fill:#ffffff
+            style edge fill:#ffffff
+            style zindex fill:#ffffff
+            style translate fill:#ffffff
+            style edge_variations fill:#ffccaa
+            style translate_variations fill:#ffccaa            
+        end
+
+
+
+        subgraph Size
+            size --> size_init
+            size_init(".w- | .h-") --> size_types("? | min-? | max-?")
+            size_types -->|percent| size_types_percent("`5 | 10 | 20 | 25 | 30 | 40 | ... | 90 | 95 | 100`")
+            size_types -->|pixel| size_types_pixel
+            
+            size_types_pixel("`50 | 80 | 100 | 120 | 150 | 200 | 250 | 220 | 300 | 400 | 450| 500 | 600 | 650 | 700 | 1080`")
+            size_types_pixel --> size_types_pixel_types("px")
+            size_types -->|viewport| size_types_viewport("80 | 95 | 90 | 100")
+            size_types_viewport --> size_types_viewport_types("vw | vh")
+
+            style size fill:#ffffff
+            style size_types_percent fill:#ffccaa            
+            style size_types_pixel fill:#ffccaa            
+            style size_types_viewport fill:#ffccaa            
+        end
+
+        subgraph Depth
+            zindex --> zindex_init
+            zindex_init(.z-?) --> zindex_types("? | -?")
+            zindex_types --> zindex_variations("`1 | 2 | 3 | 5 | 10 | 50 | 100 | 200 | ... | 900 | 999 | 1000 | 1001`")
+
+            style zindex_variations fill:#ffccaa            
+        end
+
+
         style Create fill:#f9f9f9
     end
-    

@@ -228,30 +228,31 @@ function Gallery({
 
                 <div className="flex-wrap gap-8 pa-4">
                     <div className="flex-col">
-                        <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">CREATE</div>
+                        <div className="flex tx-lgx mt-4 mb-2 opaci-10 tx-ls-5">CREATE</div>
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">POSITION</button>
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">SIZE</button>
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">INDEX</button>
-                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">SPACING</button>
-                        </div>
-                        <div className="flex-wrap gap-3 mt-8">
-                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
                         </div>
                     </div>
                     <div className="flex-col">
-                        <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">UPDATE</div>
+                        <div className="flex tx-lgx mt-4 mb-2 opaci-10 tx-ls-5">STRUCTURE</div>
                         <div className="flex-wrap gap-3">
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">SPACING</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">DISPLAY</button>
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">TEXT</button>
+                        </div>
+                    </div>
+                    <div className="flex-col">
+                        <div className="flex tx-lgx mt-4 mb-2 opaci-10 tx-ls-5">UPDATE</div>
+                        <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">BACKGROUND</button>
+                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">FILTER</button>
                         </div>
-                        <div className="flex-wrap gap-3 mt-8">
-                            <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">OPACITY</button>
-                        </div>
                     </div>
                     <div className="flex-col">
-                        <div className="flex tx-lgx mt-8 mb-2 opaci-10 tx-ls-5">BEHAVE</div>
+                        <div className="flex tx-lgx mt-4 mb-2 opaci-10 tx-ls-5">BEHAVE</div>
                         <div className="flex-wrap gap-3">
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">CURSOR</button>
                             <button className="tx-white flex bg-w-10 px-3 py-2 opaci-chov--50 bord-r-8">MEDIA QUERY</button>
@@ -260,6 +261,7 @@ function Gallery({
                         </div>
                     </div>
                 </div>
+                <div className="flex-wrap gap-3 my-8"></div>
             </div>
 
 
