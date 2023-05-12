@@ -134,7 +134,7 @@ function Gallery({
             <a href="https://www.npmjs.com/package/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
                 Download from NPM
             </a>
-            <a href="https://tresd1.gitbook.io/csscss/" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
+            <a href="https://3duno.gitbook.io/csscss/" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
                 Docs
             </a>
         </div>
@@ -167,7 +167,7 @@ function Gallery({
                  */}
                  <div className="flex pl-1 opaci-75"> 
                     <a className="ml- duno-btn bord-r-50 tx-white py-2 px-8  tx-lg opaci-chov--75" target="_blank"
-                        href="https://tresd1.gitbook.io/csscss/"
+                        href="https://3duno.gitbook.io/csscss/"
                         style={{boxShadow:"0px 0px 25px #CF589433", filter:"hue-rotate(135deg)"}}
                     >
                         Docs
@@ -424,7 +424,7 @@ function Gallery({
 
             
         <div className=" flex-col gap-2 my-100 ">
-            <a target="_blank" href="https://tresd1.gitbook.io/csscss/blog/"
+            <a target="_blank" href="https://3duno.gitbook.io/csscss/about/blog/"
                 className="opaci-chov--50 pa-2 tx-lx tx-white py-4 tx-center tx-ls-8 gap-4 flex-col">
                 <div>CSSCSS</div>
                 <div>BLOG</div>

@@ -5,7 +5,7 @@ This Repository holds the code for the first demo page for the CSSCSS library
 
 ## Important Links
 - NPM Package: [https://www.npmjs.com/package/csscss](https://www.npmjs.com/package/csscss)
-- Docs: [https://tresd1.gitbook.io/csscss/](https://tresd1.gitbook.io/csscss/)
+- Docs: [https://3duno.gitbook.io/csscss/](https://3duno.gitbook.io/csscss/)
 - Latest Demo: [https://csscss.vercel.app/](https://csscss.vercel.app/)
 - Github Demo: [https://3dunoabraham.github.io/csscss/](https://3dunoabraham.github.io/csscss/)
 
