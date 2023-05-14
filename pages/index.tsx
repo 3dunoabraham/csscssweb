@@ -131,10 +131,13 @@ function Gallery({
                 </a>
             </div>
             {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
-            <a href="https://www.npmjs.com/package/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
+            <a href="https://www.npmjs.com/package/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-1 nodeco tx-center">
                 Download from NPM
             </a>
-            <a href="https://3duno.gitbook.io/csscss/" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-2 nodeco tx-center">
+            <a href="https://3duno.gitbook.io/csscss/" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-1 nodeco tx-center">
+                Github
+            </a>
+            <a href="https://3duno.gitbook.io/csscss/" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-1 nodeco tx-center">
                 Docs
             </a>
         </div>
