@@ -688,7 +688,7 @@ export function ChartDashboard({query}) {
         </div>
         <div className=" pt-200"></div>
         
-        {uid && (<div className="flex gap-2">
+        {uid && (<div className="flex-warp gap-2">
             <a className="flex-center  my-8 "  href="/">
                 <button className="tx-lg  opaci-chov-50  hov-bord-1-w py-4 px-8 bord-r-50"
                     style={{boxShadow:"0px 0px 25px #CF589466"}}
@@ -705,6 +705,30 @@ export function ChartDashboard({query}) {
                 </button>
             </div>
         </div>)}
+        {uid && 
+            <div>
+                <a href="https://gtabtc.vercel.app/" className="tx-xl tx-white py-4 my-8 block tx-center opaci-chov--50"
+                    target="_blank"
+                >
+                    <div className="tx-sm">
+                        <span className="opaci-50">Open</span> <span>G</span><span className="opaci-50">amified</span>  <span>T</span><span className="opaci-50">rading</span>  <span>A</span><span className="opaci-50">pp</span> 
+                    </div>
+                    <div>GTA ByteCity</div>
+                    {/* <div>Bit Token Capital</div> */}
+                </a>
+            </div>
+        }
+        {uid && 
+            <div>
+                <a href="https://tresduno.vercel.app/" className="tx-xl tx-white py-4 my-8 block tx-center opaci-chov--50"
+                    target="_blank"
+                >
+                    <div className="tx-sm"><span className="opaci-50">Open</span> <span>Live Trading-Simulation</span> <span className="opaci-50">App</span> </div>
+                    <div>Tres Duno Capital</div>
+                    {/* <div>Bit Token Capital</div> */}
+                </a>
+            </div>
+        }
     </div>
     )
 }
