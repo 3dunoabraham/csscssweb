@@ -111,36 +111,50 @@ function Gallery({
                     <span className="tx-bold-2 mb-2">Build fast, <br /> use CSS.</span>
                     {/* <span className="tx-bold-3 mb-4">DCA</span> */}
                 </h1>
-                <a className="duno-btn tx-white py-4 px-8 bord-r-50 tx-lg opaci-chov--75" target="_blank"
+                <a className="nodeco duno-btn tx-white py-4 px-8 bord-r-50 tx-lg opaci-chov--75" target="_blank"
                     href="https://3dunoabraham.github.io/csscss/"
                     style={{boxShadow:"0px 0px 25px #CF589433"}}
                 >
-                    View Demo
+                    View Demo <small className="tx-sm opaci-50">(Github)</small>
                 </a>
             </div>
+            {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
 
             <span className="tx-sm tx-bold-5 ma-2 opaci-50 tx-ls- tx-center">
                 A consistent & intuitive styling framework fully based on CSS.
             </span>
-            {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
 
-            <hr className="opaci-10 w-50  mt-100" />
+
+            <br className="mt-8" />
+
+            <a href="/chart/4h?token=btc" 
+                className="tx-l tx-bold-3 tx-white opaci-chov--50 tx-bold-6  py-2 tx-center tx-lx px-3 box-shadow-2-b bord-r-5 bg-w-10 nodeco"
+                style={{color:"#80E3B9"}}
+            >
+                Enter Dashboard Demo
+            </a>
+            
+
+            <hr className="opaci-10 w-50  mt-4" />
+
+            
             <div className="flex-col  ">
                 <a href="https://unpkg.com/csscss@latest/index.css" target="_blank" className="tx-lx tx-bold-3 tx-white opaci-chov--25 tx-bold tx-ls-3 py-6 tx-center">
                     Download
                 </a>
             </div>
             {/* <hr className="opaci-10 w-50 mt-4 mb-8" /> */}
-            <a href="https://www.npmjs.com/package/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-1 pt-2 nodeco tx-center">
+            <a href="https://www.npmjs.com/package/csscss" target="_blank" className="opaci-50 tx-l tx-bold-3 tx-white opaci-chov--25 tx-ls-1 py-1 pt-2 nodeco tx-center">
                 Download from NPM
             </a>
             <a href="https://github.com/3dunoabraham/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-1 pt-2 nodeco tx-center">
-                Github
+                Github Repository
             </a>
-            <a href="https://3duno.gitbook.io/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 opaci-75 tx-ls-1 py-1 pt-2 nodeco tx-center">
-                Docs
+            <a href="https://3duno.gitbook.io/csscss" target="_blank" className="tx-l tx-bold-3 tx-white opaci-chov--25 tx-bold-5 tx-ls-1 py-1 pt-2 nodeco tx-center">
+                Documentation
             </a>
         </div>
+        
         <div className="pos-abs bottom-0 z-1000 translate-y-50" style={{left:"0"}}  >
             <div className="flex-col tx-xxxl tx-white " >
                 {/* <div className="shake-3">

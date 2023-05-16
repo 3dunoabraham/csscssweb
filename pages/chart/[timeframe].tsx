@@ -10,7 +10,7 @@ export default () => {
     
     if (zzz) return
     return (
-        <div className=" h-100">
+        <div className=" h-100 ">
             <ChartDashboard query={router.query}/>
         </div>
     )

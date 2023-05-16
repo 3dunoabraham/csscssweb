@@ -74,18 +74,21 @@ export const TokenConfigStateButtons = ({
                         <div className="px-2 py-1 bg-white bord-r-5 tx-red">Don't <br /> Trade</div> */}
                     </div>
                 }
-                <div onClick={()=>{updateTokenOrder(aToken,DEFAULT_TIMEFRAME_ARRAY.indexOf(timeframe) ,"buy")}}
-                    className="opaci-chov--50 bg-b-10  px-3 py-1 bord-r-15 mx-1 mt-1 tx-center"
-                >
-                    Balance
-                    <br/>
-                    {theToken &&
-                        <div>
-                            {theToken.buy == 2 && <div>Full In</div>}
-                            {theToken.buy == 1 && <div>Half In</div>}
-                            {theToken.buy == 0 && <div>Empty</div>}
-                        </div>
-                    }
+                <div className="flex-col">
+                    <div className="opaci-50 tx-xsm ">Set Balance</div>
+                    <div onClick={()=>{updateTokenOrder(aToken,DEFAULT_TIMEFRAME_ARRAY.indexOf(timeframe) ,"buy")}}
+                        className="opaci-chov--50 bg-b-10  px-3 py-1 bord-r-15 mx-1 mt-1 tx-center"
+                    >
+                        Balance
+                        <br/>
+                        {theToken &&
+                            <div>
+                                {theToken.buy == 2 && <div>Full In</div>}
+                                {theToken.buy == 1 && <div>Half In</div>}
+                                {theToken.buy == 0 && <div>Empty</div>}
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
             <div className="flex-row flex-align-center  Q_xs_flex-col ">

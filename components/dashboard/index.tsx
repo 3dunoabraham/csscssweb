@@ -100,7 +100,7 @@ export function ChartDashboard({query}) {
     const queryUSDT:any = useQuery({
         queryKey: ['usdt'],
         queryFn: async () => {
-            console.log("fetching now")
+            // console.log("fetching now")
             return online ? (await fetchMultipleJsonArray(tokensReqObj)) : DEFAULT_TOKEN
         },        
         refetchInterval: 3000,
@@ -143,29 +143,46 @@ export function ChartDashboard({query}) {
     
     /********** UPDATE **********/
     const getData = async (randomThousand:any) => {
-        const res:any = await fetch('https://geolocation-db.com/json/')
-        let awaited = await res.json()
-        s__clientIP(awaited.IPv4)
-        let new_uid = `${awaited.IPv4}:${randomThousand}`
-        s__uid(new_uid)
-        s__LS_uid(new_uid)
+        // const res:any = await fetch('https://geolocation-db.com/json/')
+        // let awaited = await res.json()
+        // s__clientIP(awaited.IPv4)
+        // let new_uid = `${awaited.IPv4}:${randomThousand}`
+        s__uid("user:"+randomThousand)
+        s__LS_uid("user:"+randomThousand)
+    }
+    const leave = () => {
+        s__LS_uid("")
+        s__LS_tokensArrayObj("{}")
+        window.location.reload()
     }
     const register = () => {
         let randomThousand = parseInt(`${(Math.random()*9000) + 1000}`)
-        if (confirm(`IP+${randomThousand}\nWould you like to Register?`)) {
+        if (confirm(`Create local account #${randomThousand}\nWould you like to Register? (${randomThousand})`)) {
             getData(randomThousand)
         }
     }
     const clickImportConfig = () => {
         let backup = prompt("Backup:")
+        if (!backup) return
         importConfig(backup)
     }
     const importConfig = (strTokensArrayObj) => {
-        s__LS_tokensArrayObj(strTokensArrayObj)
-        window.location.reload()
+        try {
+            let theObj:any = JSON.parse(strTokensArrayObj)
+            s__LS_tokensArrayObj(strTokensArrayObj)
+            window.location.reload()
+
+        } catch (e:any) {
+            alert("invalid database format")
+        }
     }
     const exportConfig = () => {
+        console.log("******************************************************")
+        console.log("EXPORT BELOW")
         console.log(JSON.stringify(tokensArrayObj))
+        console.log("EXPORT ABOVE")
+        console.log("******************************************************")
+        alert("Export will also be available in the development console \n\n"+JSON.stringify(tokensArrayObj))
     }
     const joinToken = (token:string) => {
         // console.log("queryUSDT.data",queryUSDT.data,DEFAULT_TOKENS_ARRAY)
@@ -196,11 +213,14 @@ export function ChartDashboard({query}) {
     const updateTokenOrder = (token:string, timeframe:any, substate:string,val:any="") => {
         if (!token) return
         let promptVal = !val ? prompt("Enter Value") : val
+        if (substate == "floor" || substate == "ceil") {
+            if (!promptVal) return
+        }
         let value = !promptVal ? 0 : parseFloat(promptVal)
         let timeframeIndex = timeframe
-        console.log("timeframe,", timeframeIndex, value, token)
+        // console.log("timeframe,", timeframeIndex, value, token)
         let old_tokensArrayObj = tokensArrayObj[token][timeframeIndex]
-        console.log("egfrh", old_tokensArrayObj, tokensArrayObj)
+        // console.log("egfrh", old_tokensArrayObj, tokensArrayObj)
 
         let old_tokensArrayObjArray = [...tokensArrayObj[token]]
         let newCrystal = {
@@ -211,11 +231,11 @@ export function ChartDashboard({query}) {
             }),
         }
         old_tokensArrayObjArray[timeframeIndex] = {...old_tokensArrayObj,...newCrystal}
-        console.log("zzzzzz",newCrystal, value)
+        // console.log("zzzzzz",newCrystal, value)
         let bigTokensObj = {...tokensArrayObj, ...{[token]:old_tokensArrayObjArray}}
         s__tokensArrayObj(bigTokensObj)
         s__LS_tokensArrayObj((prevValue) => JSON.stringify(bigTokensObj))
-        console.log("rgwrgwg",bigTokensObj)
+        // console.log("rgwrgwg",bigTokensObj)
     }
     const updateTokenState = (token:string, timeframe:any, substate:string, value:number) => {
         if (!token) return
@@ -273,15 +293,25 @@ export function ChartDashboard({query}) {
     return (
     <div className="body h-min-100  pos-rel flex-col flex-justify-start noverflow">
         {/* {!uid && <div className="h-100px w-100px z-999 "></div>} */}
-        {!uid && (
-            <div className="flex-center  my-2 "  onClick={()=>{register()}}>
-                <button className="tx-lg tx-white opaci-chov-50 duno-btn hov-bord-1-w py-4 px-8 bord-r-50"
+        {(<div className="flex gap-2">
+            <a className="flex-center  my-8 "  href="/">
+                <button className="tx-lg  opaci-chov-50  hov-bord-1-w py-4 px-8 bord-r-50"
                     style={{boxShadow:"0px 0px 25px #CF589466"}}
                 >
-                Register
+                    Go Back
                 </button>
-            </div>
-        )}
+            </a>
+            {!uid &&  <div className="flex-col my-8">
+                <div className="flex-center   "  onClick={()=>{register()}}>
+                    <button className="tx-lg tx-white opaci-chov-50 duno-btn hov-bord-1-w py-4 px-8 bord-r-50"
+                        style={{boxShadow:"0px 0px 25px #CF589466"}}
+                    >
+                        Register
+                    </button>
+                </div>
+                <div className="py-1 tx-white opaci-50 tx-sm">Local Storage Only *</div>
+            </div>}
+        </div>)}
         <div
             className={
                 "bg-glass-6   bord-r-10 tx-white mt-4 py-2 z-999 fade-in w-95 noverflow flex flex-between"
@@ -335,7 +365,7 @@ export function ChartDashboard({query}) {
                                     <div className="      flex-col w-100 " >
                                         
                                         {<div className="tx-lgx  w-100 flex flex-align-start  " >
-                                            <a className={`opaci-chov--50 tx-white ${aToken == cryptoToken?"":"nodeco"} `} href={`/chart/${timeframe}?token=${aToken}`}>
+                                            <a className={`opaci-chov--50 tx-white ${aToken == cryptoToken?"":"opaci-25 nodeco"} `} href={`/chart/${timeframe}?token=${aToken}`}>
                                                 <span className="px-1">{aToken.toUpperCase()}:</span>
                                                 <span className="tx-ls-2">{isK && parseDecimals(queryUSDT.data[index].price)}</span>
                                             </a>
@@ -634,7 +664,7 @@ export function ChartDashboard({query}) {
                     </div>
                 }   
 
-                <div className="flex-1 px-2 w-100 mt-3 opaci-10"><hr/></div>
+                {/* <div className="flex-1 px-2 w-100 mt-3 opaci-10"><hr/></div>
                 <div className="flex-1 w-100    ">
                     {!!uid && 
                         <details className="tx-white flex flex-align-end ">
@@ -652,11 +682,29 @@ export function ChartDashboard({query}) {
                         </details>
                     }
 
-                </div>
+                </div> */}
 
             </div>
         </div>
         <div className=" pt-200"></div>
+        
+        {uid && (<div className="flex gap-2">
+            <a className="flex-center  my-8 "  href="/">
+                <button className="tx-lg  opaci-chov-50  hov-bord-1-w py-4 px-8 bord-r-50"
+                    style={{boxShadow:"0px 0px 25px #CF589466"}}
+                >
+                    Go Back
+                </button>
+            </a>
+            <div className="flex-center  my-8 "  onClick={()=>{leave()}}>
+                <button className="tx-lg tx-white opaci-chov-50 duno-btn hov-bord-1-w py-4 px-8 bord-r-50 flex-col"
+                    style={{boxShadow:"0px 0px 25px #CF589466"}}
+                >
+                    Leave
+                    <small className="tx-smd opaci-50">Delete local account</small>
+                </button>
+            </div>
+        </div>)}
     </div>
     )
 }
