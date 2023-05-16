@@ -1,5 +1,5 @@
 # CSSCSS
-#### Cheat Sheet Strategy for Cascading Style Sheets 
+#### This the application for the CSSCSS Framework 
 
 A collection of consistent CSS classes used for fast and efficient layout crafting directly into the HTML. The class names are intuitively designed to resemble CSS properties, making them easy to remember and use effectively.
 
