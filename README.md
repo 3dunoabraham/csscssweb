@@ -1,32 +1,51 @@
 # CSSCSS
-#### Utility-first CSS framework.
-This Repository holds the code for the first demo page for the CSSCSS library
-* CSSCSS version used in this project: 0.7.0
+#### Cheat Sheet Strategy for Cascading Style Sheets 
+
+A collection of consistent CSS classes used for fast and efficient layout crafting directly into the HTML. The class names are intuitively designed to resemble CSS properties, making them easy to remember and use effectively.
 
 ## Important Links
-- NPM Package: [https://www.npmjs.com/package/csscss](https://www.npmjs.com/package/csscss)
-- Docs: [https://3duno.gitbook.io/csscss/](https://3duno.gitbook.io/csscss/)
-- Latest Demo: [https://csscss.vercel.app/](https://csscss.vercel.app/)
-- Github Demo: [https://3dunoabraham.github.io/csscss/](https://3dunoabraham.github.io/csscss/)
+- Website: https://csscss.vercel.app/
+- Documentation: https://3duno.gitbook.io/csscss/
+- NPM Package: https://www.npmjs.com/package/csscss
+
 
 ## Features
 CSSCSS includes a wide range of utility classes that are organized into different categories based on their purpose. Here's an overview of what you can expect:
-- A responsive grid system based on the Flexbox layout model.
-- Exhaustive predefined spacing classes for adding margins and paddings to elements.
-- Several text styles for size, weight, color, alignment, spacing, decoration and more.
-- Animation classes for any elements, such as fading in/out, scaling, and rotating.
-- A set of color classes for quickly applying background, text colors and hovers.
+- Creational Classes (Position, Size, Index)
+- Structural Classes (Spacing, Display, Text)
+- Restructuring Classes (Background, Opacity, Filter)
+- Behavioral Classes (Cursor, Media Query, Animations, More)
 
----
 
 ## Installation
 You can install CSSCSS using npm by running the following command:
 ```bash
 npm install csscss
 ```
-Alternatively, you can include the CSS file directly in your HTML using the following link:
+Then import the package, this will link to the index.css file at root
 ```html
 <link rel="stylesheet" href="https://unpkg.com/csscss@latest/index.css">
 ```
 
-Read more -> /docs
+## Download
+Alternatively, you can include the CSS file directly in your HTML using the following links:
+```bash
+https://cdn.jsdelivr.net/npm/csscss@latest
+
+or
+
+https://unpkg.com/csscss@latest
+```
+You can import into the <head> of your HTML:
+```html
+<link rel="stylesheet" href="https://unpkg.com/csscss@latest/index.css">
+```
+
+or simply copy or download the contents of the file, and use it as you wish in your own project.
+
+### Cheat Sheet
+Concise set of commonly used classes used for quick reference:
+- [CSSCSS Cheat Sheet](https://3duno.gitbook.io/csscss/where-to-start/cheat-sheet)
+### API
+Comprehensive documentation for all classes with information related to describe the use, functionality or architecture.
+- [CSSCSS API Documentation](https://3duno.gitbook.io/csscss/documentation/api)

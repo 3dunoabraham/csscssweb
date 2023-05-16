@@ -1,5 +1,14 @@
 {
-  "private": true,
+  "author": "Abraham Duno <tresduno@gmail.com> (https://duno.vercel.app/)",
+  "name": "csscssweb",
+  "version": "1.0.0",
+  "description": "Website for the CSSCSS Framework",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "css",
+    "framework"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
